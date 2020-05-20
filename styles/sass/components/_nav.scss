@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 100px;
+    ul{
+        display:flex;
+        flex-direction: row;
+        li{
+            justify-content: space-around;
+        }
+    }
+}
+
+.logo {
+    font-family: $dokdo;
+    font-size: 41.5px;
+    text-align: center;
+    text-decoration: none;
+    color: $marigold;
+}
