@@ -3,15 +3,22 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 100px;
-    ul{
-        display:flex;
-        flex-direction: row;
-        li{
-            justify-content: space-around;
+}
+.menu{
+    display:flex;
+    flex-direction: row;
+    li {
+        padding:10px;
+        a {
+            text-decoration: none;
+            color: $iceBlue;
+
+            &:hover, &:focus {
+                color: $marigold;
+            }
         }
     }
 }
-
 .logo {
     font-family: $dokdo;
     font-size: 41.5px;

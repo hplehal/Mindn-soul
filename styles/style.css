@@ -254,7 +254,7 @@ nav {
   padding: 20px 100px;
 }
 
-nav ul {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,9 +264,17 @@ nav ul {
           flex-direction: row;
 }
 
-nav ul li {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.menu li {
+  padding: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #FAFFFE;
+}
+
+.menu li a:hover, .menu li a:focus {
+  color: #FFC600;
 }
 
 .logo {
@@ -295,6 +303,18 @@ section:nth-child(even) {
 
 .headerHome {
   background-image: url(../assets/images/home-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.headerContact {
+  background-image: url(../assets/images/contact-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.headerBlog {
+  background-image: url(../assets/images/blog-image-1.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
