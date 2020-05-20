@@ -5,6 +5,8 @@
 
 // Components
 @import 'components/setup';
+@import 'components/nav';
+@import 'components/buttons';
 @import 'components/footer';
 
 // Pages
@@ -18,4 +20,5 @@
 
 body {
     background-color: $camoGreen;
+    color: $iceBlue;
 }

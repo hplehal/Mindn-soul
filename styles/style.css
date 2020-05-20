@@ -248,6 +248,21 @@ footer {
   padding: 20px;
 }
 
+section:nth-child(odd) {
+  background-color: #262725;
+}
+
+section:nth-child(even) {
+  background-color: #1E140E;
+}
+
+.headerHome {
+  background-image: url(../assets/images/home-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 body {
   background-color: #1E140E;
+  color: #FAFFFE;
 }

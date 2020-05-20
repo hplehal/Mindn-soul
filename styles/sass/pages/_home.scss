@@ -1,0 +1,17 @@
+// $iceBlue: #FAFFFE;
+// $charcoal: #262725;
+// $marigold: #FFC600;
+// $mudGreen: #555F02;
+// $camoGreen: #1E140E;
+section:nth-child(odd){
+    background-color: $charcoal;
+}
+section:nth-child(even){
+    background-color: $camoGreen;
+}
+
+.headerHome {
+    background-image: url(../assets/images/home-image-1.jpg );
+    background-repeat: no-repeat;
+    background-size: contain;
+}
