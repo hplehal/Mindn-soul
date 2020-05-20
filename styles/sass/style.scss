@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap');
+// Helpers
+@import 'helpers/parameters';
+@import 'helpers/mixins';
+
+// Components
+@import 'components/footer';
+
+// Pages
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/blog';
+
+// layouts
+@import 'layouts/responsive';
+
+
 body {
-    background-color: salmon;
+    background-color: $camoGreen;
 }
