@@ -1,5 +1,11 @@
 .headerBlog {
     background-image: url(../assets/images/blog-image-1.jpg );
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    height:50vh;
+}
+
+.mainBlog {
+    display: flex;
 }

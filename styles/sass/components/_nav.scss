@@ -1,18 +1,24 @@
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 20px 100px;
 }
+.menu {
+    flex: 0 1 30%;
+}
+
+
 .menu{
-    display:flex;
-    flex-direction: row;
+    display: flex;
     li {
-        padding:10px;
+        display: flex;
+        justify-content: center;
+	    align-items: center;
+        flex: 1 1 calc(100% / 3);
         a {
             text-decoration: none;
             color: $iceBlue;
-
+    
             &:hover, &:focus {
                 color: $marigold;
             }
@@ -20,9 +26,11 @@ nav {
     }
 }
 .logo {
-    font-family: $dokdo;
-    font-size: 41.5px;
+    @include fontMixin($dokdo, 41.5px, $marigold);
     text-align: center;
     text-decoration: none;
-    color: $marigold;
+
+    &:hover, :focus {
+        color: $iceBlue;
+    }
 }

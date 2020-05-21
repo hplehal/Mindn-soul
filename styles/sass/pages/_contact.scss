@@ -1,5 +1,11 @@
 .headerContact {
     background-image: url(../assets/images/contact-image-1.jpg );
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    height:50vh;
+}
+
+.contactSection {
+    display: flex;
 }

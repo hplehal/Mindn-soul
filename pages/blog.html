@@ -21,7 +21,7 @@
         </nav>
         <h1>Blog</h1>
     </header>
-    <main>
+    <main class="mainBlog">
         <section>
             <img src="../assets/images/post-image.jpg" alt="">
             <article>
@@ -64,10 +64,12 @@
                     </div>
                 </div>
                 <form action="">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email address">
+                    <label class="visually-hidden" for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Name" id="name">
+                    <label class="sr-only" for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email address" id="email">
                     <textarea name="comment" placeholder="Comment" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Post Comment">
+                    <button type="submit">Post Comment</button>
                 </form>
             </div>
         </section>

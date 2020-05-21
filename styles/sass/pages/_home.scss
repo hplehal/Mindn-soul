@@ -3,15 +3,65 @@
 // $marigold: #FFC600;
 // $mudGreen: #555F02;
 // $camoGreen: #1E140E;
-section:nth-child(odd){
+.mainHome section:nth-child(even){
     background-color: $charcoal;
 }
-section:nth-child(even){
+.mainHome section:nth-child(odd){
     background-color: $camoGreen;
 }
 
 .headerHome {
     background-image: url(../assets/images/home-image-1.jpg );
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    width:100vw;
 }
+
+.headerContent {
+    display: flex;
+    justify-content: space-around;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            @include fontMixin($dokdo, 115px, $marigold);
+        }
+        h3 {
+            @include fontMixin($lato, 45px, $iceBlue);
+        }
+    }
+    img {
+        position: relative;
+        top: 100px;
+    }
+}
+
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 250px;
+    img {
+        flex: 1 0 20%;
+    }
+}
+
+.gallerySection {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.infoSection {
+    display: flex;
+    flex-wrap: wrap;
+    div {
+        flex: 1 0 40%;
+        padding: 20px;
+    }
+}
+
+
+
+
