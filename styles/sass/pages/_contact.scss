@@ -9,3 +9,9 @@
 .contactSection {
     display: flex;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}

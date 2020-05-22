@@ -240,6 +240,36 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  font-family: "Dokdo", cursive;
+  font-size: 105px;
+  color: #FFC600;
+  line-height: 69.6px;
+  letter-spacing: 10.9px;
+}
+
+h3 {
+  font-family: "Dokdo", cursive;
+  font-size: 45px;
+  color: #FFC600;
+  line-height: 58px;
+  letter-spacing: 4.9px;
+}
+
+h4 {
+  font-family: "Dokdo", cursive;
+  font-size: 40px;
+  color: #FFC600;
+  line-height: 58px;
+  letter-spacing: 4.3px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #FAFFFE;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,8 +282,8 @@ nav {
 
 .menu {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
 }
 
 .menu {
@@ -278,8 +308,12 @@ nav {
 }
 
 .menu li a {
-  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
   color: #FAFFFE;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .menu li a:hover, .menu li a:focus {
@@ -296,6 +330,14 @@ nav {
 
 .logo:hover, .logo :focus {
   color: #FAFFFE;
+}
+
+.more {
+  font-family: "Dokdo", cursive;
+  font-size: 30px;
+  color: #FAFFFE;
+  background-color: #555F02;
+  border: none;
 }
 
 footer {
@@ -401,6 +443,25 @@ footer {
   padding: 20px;
 }
 
+.freeTrialContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
 .headerContact {
   background-image: url(../assets/images/contact-image-1.jpg);
   background-repeat: no-repeat;
@@ -413,6 +474,17 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
 }
 
 .headerBlog {

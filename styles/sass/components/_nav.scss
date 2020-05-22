@@ -4,7 +4,7 @@ nav {
     padding: 20px 100px;
 }
 .menu {
-    flex: 0 1 30%;
+    flex: 0 1 40%;
 }
 
 
@@ -16,8 +16,10 @@ nav {
 	    align-items: center;
         flex: 1 1 calc(100% / 3);
         a {
+            @include fontMixin($lato, 20px, $iceBlue);
+            font-weight: 700;
+            letter-spacing: 1px;
             text-decoration: none;
-            color: $iceBlue;
     
             &:hover, &:focus {
                 color: $marigold;

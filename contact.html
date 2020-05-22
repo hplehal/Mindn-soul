@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindn'Soul | Contact</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -13,20 +13,25 @@
         <nav>
             <a class="logo" href="../index.html">Mindn'Soul</a>
             <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contact.html" active>Contact</a></li>
             </ul>
         </nav>
-        <h1>Get in Touch</h1>
+        <h2>Get in Touch</h2>
     </header>
     <main class="contactSection">
         <form action="">
-            <input type="text" name="Name" placeholder="Name">
-            <input type="email" name="Email" placeholder="Email address">
-            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <input type="submit" value="Submit">
+            <fieldset>
+                <label class="sr-only" for="name">Name:</label>
+                <input type="text" name="Name" placeholder="Name" id="name">
+                <label class="sr-only" for="email">Email:</label>
+                <input type="email" name="Email" placeholder="Email address" id="email">
+            </fieldset>
+            <label class="sr-only" for="message">Message</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" id="message"></textarea>
+            <button type="submit">Submit</button>
         </form>
         <section class="">
             <div class="socialMediaIcons">
