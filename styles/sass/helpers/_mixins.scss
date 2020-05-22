@@ -1,10 +1,5 @@
-@mixin headingH2 {
-    font-size: 45px;
-    line-height: 58px;
-    letter-spacing: 4.9px;
-}
 
-@mixin fontMixin($font, $fontSize, $color) {
+@mixin fontMixin($font, $fontSize, $color ) {
     font-family: $font;
     font-size: $fontSize;
     color: $color;

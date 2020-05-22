@@ -1,20 +1,27 @@
 h2 {
-    @include fontMixin($dokdo, 105px, $marigold);
-    line-height: 69.6px;
-    letter-spacing: 10.9px;
+  @include fontMixin($dokdo, 105px, $marigold);
+  line-height: 69.6px;
+  letter-spacing: 10.9px;
 }
 h3 {
-    @include fontMixin($dokdo, 45px, $marigold);
-    line-height: 58px;
-    letter-spacing: 4.9px;
+  @include fontMixin($dokdo, 45px, $marigold);
+  line-height: 58px;
+  letter-spacing: 4.9px;
 }
 
 h4 {
-    @include fontMixin($dokdo, 40px, $marigold);
-    line-height: 58px;
-    letter-spacing: 4.3px;
+  @include fontMixin($dokdo, 40px, $marigold);
+  line-height: 58px;
+  letter-spacing: 4.3px;
 }
 
-p{
-    @include fontMixin($lato, 20px, $iceBlue);
+p,
+a {
+  @include fontMixin($lato, 20px, $iceBlue);
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
 }

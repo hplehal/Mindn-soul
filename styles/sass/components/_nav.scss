@@ -1,38 +1,138 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
 }
 .menu {
-    flex: 0 1 40%;
+  flex: 0 1 40%;
 }
 
+.menu {
+  display: flex;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 calc(100% / 3);
+  position: relative;
+  //   inspired by Thomas Aufresne CodePen
+  a {
+    @include fontMixin($lato, 20px, $iceBlue);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 70%;
+      height: 3px;
+      background-color: $marigold;
+      transform: scaleX(0);
+      transform-origin: bottom left;
 
-.menu{
-    display: flex;
-    li {
-        display: flex;
-        justify-content: center;
-	    align-items: center;
-        flex: 1 1 calc(100% / 3);
-        a {
-            @include fontMixin($lato, 20px, $iceBlue);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-decoration: none;
-    
-            &:hover, &:focus {
-                color: $marigold;
-            }
-        }
+      transition: transform 0.5s;
     }
+
+    &:hover,
+    &:focus {
+      color: $marigold;
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  .active {
+    color: $marigold;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 70%;
+      height: 3px;
+      background-color: $marigold;
+      transform: scaleX(1);
+    }
+  }
 }
-.logo {
+
+.logoDiv {
+  position: relative;
+}
+
+.logoWrapper {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: $marigold;
+    transform: scaleY(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-color: $marigold;
+    transform: scaleY(0);
+    transform-origin: top right;
+    transition: transform 0.3s;
+  }
+
+  .logo {
     @include fontMixin($dokdo, 41.5px, $marigold);
     text-align: center;
     text-decoration: none;
+    padding: 10px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $marigold;
+      transform: scaleX(0);
+      transform-origin: top left;
 
-    &:hover, :focus {
-        color: $iceBlue;
+      transition: transform 0.3s;
     }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $marigold;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+
+      transition: transform 0.3s;
+    }
+  }
+  &:hover {
+    &:before,
+    &:after {
+      transform: scaleY(1);
+    }
+
+    .logo {
+      &:before,
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
 }

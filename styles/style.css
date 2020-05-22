@@ -264,10 +264,17 @@ h4 {
   letter-spacing: 4.3px;
 }
 
-p {
+p,
+a {
   font-family: "Lato", sans-serif;
   font-size: 20px;
   color: #FAFFFE;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 nav {
@@ -292,7 +299,7 @@ nav {
   display: flex;
 }
 
-.menu li {
+li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,9 +312,10 @@ nav {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(100% / 3);
           flex: 1 1 calc(100% / 3);
+  position: relative;
 }
 
-.menu li a {
+li a {
   font-family: "Lato", sans-serif;
   font-size: 20px;
   color: #FAFFFE;
@@ -316,20 +324,141 @@ nav {
   text-decoration: none;
 }
 
-.menu li a:hover, .menu li a:focus {
+li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 70%;
+  height: 3px;
+  background-color: #FFC600;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+li a:hover, li a:focus {
   color: #FFC600;
 }
 
-.logo {
+li a:hover:after, li a:focus:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+li .active {
+  color: #FFC600;
+}
+
+li .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 70%;
+  height: 3px;
+  background-color: #FFC600;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.logoDiv {
+  position: relative;
+}
+
+.logoWrapper:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #FFC600;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.logoWrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #FFC600;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.logoWrapper .logo {
   font-family: "Dokdo", cursive;
   font-size: 41.5px;
   color: #FFC600;
   text-align: center;
   text-decoration: none;
+  padding: 10px;
 }
 
-.logo:hover, .logo :focus {
-  color: #FAFFFE;
+.logoWrapper .logo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFC600;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.logoWrapper .logo:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFC600;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.logoWrapper:hover:before, .logoWrapper:hover:after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.logoWrapper:hover .logo:before, .logoWrapper:hover .logo:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .more {
@@ -338,6 +467,8 @@ nav {
   color: #FAFFFE;
   background-color: #555F02;
   border: none;
+  margin-top: 40px;
+  padding: 5px 20px;
 }
 
 footer {
@@ -361,7 +492,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
 }
 
 .headerContent {
@@ -409,13 +539,17 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 250px;
+  padding: 250px 0 100px;
 }
 
 .aboutSection img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.aboutSection .aboutContent {
+  width: 70%;
 }
 
 .gallerySection {
@@ -425,7 +559,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 100px;
+  padding: 100px 0;
+}
+
+.gallerySection img:nth-of-type(2) {
+  padding: 0 25px;
 }
 
 .infoSection {

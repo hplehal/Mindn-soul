@@ -1,5 +1,7 @@
 .more {
-    @include fontMixin($dokdo,30px,$iceBlue);
-    background-color: $mudGreen;
-    border:none;
+  @include fontMixin($dokdo, 30px, $iceBlue);
+  background-color: $mudGreen;
+  border: none;
+  margin-top: 40px;
+  padding: 5px 20px;
 }
