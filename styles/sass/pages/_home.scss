@@ -43,10 +43,12 @@
   justify-content: space-between;
   padding: 250px 0 100px;
   img {
-    flex: 0 1 100%;
+    flex: 0 1 auto;
+    box-shadow: -15px 15px $mudGreen;
   }
   .aboutContent {
-    width: 70%;
+    width: 65%;
+    padding-right: 30px;
   }
 }
 
@@ -62,12 +64,50 @@
 .infoSection {
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 0 150px;
   div {
     flex: 1 0 40%;
     padding: 20px;
   }
 }
+.homeBlog {
+  display: flex;
+  flex-direction: column;
+}
 
+.homeBlog1,
+.homeBlog2 {
+  display: flex;
+  justify-content: space-between;
+  .blogContent {
+    width: 40%;
+    margin: auto;
+  }
+}
+.homeBlog1 {
+  img {
+    position: relative;
+    bottom: 40px;
+    box-shadow: 25px 25px $marigold;
+  }
+}
+
+.homeBlog2 {
+  .blogContent {
+    order: 1;
+    text-align: right;
+  }
+  img {
+    order: 2;
+    position: relative;
+    top: 40px;
+    box-shadow: -25px 25px $marigold;
+  }
+}
+
+.freeTrialsection img {
+  width: 100%;
+}
 .freeTrialContent {
   display: flex;
   flex-direction: column;
