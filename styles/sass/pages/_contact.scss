@@ -1,17 +1,26 @@
 .headerContact {
-    background-image: url(../assets/images/contact-image-1.jpg );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height:50vh;
+  background-image: url(../assets/images/contact-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  h2 {
+    padding: 150px;
+  }
 }
 
 .contactSection {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 100px;
+  padding: 50px;
+  width: 60%;
+  background-color: $charcoal;
+  box-shadow: 20px 20px $marigold;
 }

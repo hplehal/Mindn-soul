@@ -1,4 +1,5 @@
-.more {
+.more,
+button[type="submit"] {
   @include fontMixin($dokdo, 30px, $iceBlue);
   background-color: $mudGreen;
   border: none;

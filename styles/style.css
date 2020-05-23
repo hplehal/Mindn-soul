@@ -386,6 +386,9 @@ a {
   font-family: "Lato", sans-serif;
   font-size: 20px;
   color: #FAFFFE;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 2px;
 }
 
 .wrapper {
@@ -578,7 +581,8 @@ li .active:after {
           transform: scaleX(1);
 }
 
-.more {
+.more,
+button[type="submit"] {
   font-family: "Dokdo", cursive;
   font-size: 30px;
   color: #FAFFFE;
@@ -615,8 +619,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .headerContent div {
@@ -627,9 +632,10 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 100px 0 0 40px;
 }
 
 .headerContent div h1 {
@@ -647,6 +653,7 @@ footer {
 .headerContent img {
   position: relative;
   top: 100px;
+  width: 40%;
 }
 
 .aboutSection {
@@ -661,8 +668,8 @@ footer {
 
 .aboutSection img {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
   -webkit-box-shadow: -15px 15px #555F02;
           box-shadow: -15px 15px #555F02;
 }
@@ -724,8 +731,14 @@ footer {
 
 .homeBlog1 .blogContent,
 .homeBlog2 .blogContent {
-  width: 40%;
+  width: 30%;
   margin: auto;
+}
+
+.homeBlog1 img,
+.homeBlog2 img {
+  width: 40%;
+  height: 40%;
 }
 
 .homeBlog1 img {
@@ -770,7 +783,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 100px;
 }
@@ -783,13 +796,20 @@ footer {
   height: 50vh;
 }
 
+.headerContact h2 {
+  padding: 150px;
+}
+
 .contactSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-form {
+.contactForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,7 +817,13 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  bottom: 100px;
+  padding: 50px;
   width: 60%;
+  background-color: #262725;
+  -webkit-box-shadow: 20px 20px #FFC600;
+          box-shadow: 20px 20px #FFC600;
 }
 
 .headerBlog {
