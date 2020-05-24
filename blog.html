@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mindn'Soul | Blog</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link type="image/png" href="assets/images/favicon.png" rel="icon" />
+    <title>Mindn'Soul | Blog</title>
   </head>
 
   <body>
+    <a href="#mainContent" class="skipLink">Skip to Content.</a>
     <header class="header headerBlog">
       <nav>
         <div class="logoDiv">
@@ -25,10 +27,10 @@
       </nav>
       <h2>Blog</h2>
     </header>
-    <main class="mainBlog">
+    <main id="mainContent" class="mainBlog">
       <section class="blogSection">
         <img class="blogImage" src="./assets/images/post-image.jpg" alt="" />
-        <article>
+        <article tabindex="0">
           <h3>Come and discover our space</h3>
           <p>Monday May 5th, 2019 by<span>Saron</span></p>
 
@@ -90,7 +92,7 @@
               </p>
             </div>
           </div>
-          <form action="" class="blogForm">
+          <form action="#" class="blogForm">
             <label class="sr-only" for="name">Name:</label>
             <input type="text" name="name" placeholder="Name" id="name" />
             <label class="sr-only" for="email">Email:</label>

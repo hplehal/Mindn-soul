@@ -319,3 +319,15 @@ textarea {
 img {
   max-width: 100%;
 }
+
+.skipLink {
+  position: absolute;
+  left: -10000px;
+  top: 5px;
+  z-index: 999;
+  background: #201e21;
+  color: #ffffff;
+  &:focus {
+    left: 400px;
+  }
+}

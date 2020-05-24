@@ -46,7 +46,8 @@
   justify-content: space-between;
   padding: 250px 0 100px;
   img {
-    flex: 0 1 30%;
+    width: 300px;
+    height: 300px;
     box-shadow: -15px 15px $mudGreen;
   }
   .aboutContent {
@@ -76,11 +77,28 @@
   display: flex;
   flex-wrap: wrap;
   padding: 50px 0 150px;
-  div {
-    flex: 1 0 40%;
-    padding: 20px;
+}
+.infoContent {
+  display: flex;
+  flex: 1 0 50%;
+  margin-bottom: 50px;
+  padding-right: 20px;
+  .iconHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $mudGreen;
+    width: 60px;
+    height: 55px;
+    margin-right: 20px;
+  }
+
+  .iconDetails {
+    width: 100%;
   }
 }
+
 .homeBlog {
   display: flex;
   flex-direction: column;

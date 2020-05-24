@@ -38,12 +38,8 @@ a {
   letter-spacing: 2px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-button[type="submit"] {
-  margin: 15px;
-  padding: 20px 5px;
+i {
+  font-size: 25px;
   color: $iceBlue;
 }
 

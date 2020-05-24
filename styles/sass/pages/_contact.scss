@@ -22,13 +22,10 @@
   justify-content: space-between;
 }
 
-.contactForm {
+.socialMediaIcons {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 100px;
-  padding: 50px;
-  width: 60%;
-  background-color: $charcoal;
-  box-shadow: 20px 20px $marigold;
+  justify-content: flex-start;
+  li {
+    padding-right: 25px;
+  }
 }
