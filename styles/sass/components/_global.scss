@@ -32,7 +32,7 @@ h6 {
 
 p,
 a {
-  @include fontMixin($lato, 20px, $iceBlue);
+  @include fontMixin($lato, 18px, $iceBlue);
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 2px;

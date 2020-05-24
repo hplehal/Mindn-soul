@@ -7,8 +7,8 @@
 @import "components/setup";
 @import "components/global";
 @import "components/nav";
-@import "components/buttons";
 @import "components/forms";
+@import "components/buttons";
 @import "components/footer";
 
 // Pages
@@ -18,8 +18,3 @@
 
 // layouts
 @import "layouts/responsive";
-
-body {
-  background-color: $camoGreen;
-  color: $iceBlue;
-}

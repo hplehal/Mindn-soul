@@ -11,7 +11,7 @@
     cover,
     center
   );
-  //   height: 60vh;
+  height: 60vh;
   h2 {
     padding: 150px;
   }
@@ -19,13 +19,27 @@
 
 .contactSection {
   display: flex;
-  justify-content: space-between;
+}
+
+.contactInfo {
+  margin: 150px;
+  p:nth-of-type(1) {
+    padding: 10px 0 25px;
+  }
 }
 
 .socialMediaIcons {
   display: flex;
   justify-content: flex-start;
+  color: $marigold;
   li {
     padding-right: 25px;
+    i {
+      color: $marigold;
+      &:hover,
+      &focus {
+        color: $iceBlue;
+      }
+    }
   }
 }

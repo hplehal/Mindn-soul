@@ -1,7 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 25px 80px;
+  padding: 25px 150px;
 }
 .menu {
   display: flex;
@@ -9,7 +9,7 @@ nav {
 }
 .menu li {
   display: flex;
-  margin: 0 15px;
+  margin: 0 25px;
   position: relative;
   //   inspired by Thomas Aufresne CodePen
   a {

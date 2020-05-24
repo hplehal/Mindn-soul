@@ -2,7 +2,6 @@
   position: relative;
   bottom: 100px;
   padding: 50px;
-  width: 60%;
   background-color: $charcoal;
   box-shadow: 20px 20px $marigold;
 }
@@ -14,15 +13,13 @@ form {
 
 input[type="text"],
 input[type="email"],
-textarea,
-button[type="submit"] {
+textarea {
   margin: 15px;
   padding: 10px 5px;
-  color: $iceBlue;
-  &::placeholder {
-    font-weight: 300;
-    color: $iceBlue;
-  }
+  @include fontMixin($lato, 20px, $iceBlue);
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 2px;
 }
 
 input[type="text"],
@@ -31,9 +28,10 @@ input[type="email"] {
   outline: 0;
   background: transparent;
   border-bottom: 2px solid $marigold;
+  padding: 20px;
 }
 textarea,
-button[type="submit"] {
+.formButton {
   grid-column: 1 / 3;
 }
 textarea {

@@ -1,8 +1,18 @@
 .more,
-button[type="submit"] {
+.formButton {
   @include fontMixin($dokdo, 30px, $iceBlue);
   background-color: $mudGreen;
   border: none;
   margin-top: 40px;
   padding: 5px 20px;
+  transition: 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+  }
 }
+
+// .formButton {
+//     .formButton
+// }
