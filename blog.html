@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <header class="headerBlog">
+    <header class="header headerBlog">
       <nav>
         <div class="logoDiv">
           <span class="logoWrapper">
@@ -17,17 +17,17 @@
         </div>
 
         <ul class="menu">
-          <li><a class="bottomHover" href="./index.html">Home</a></li>
-          <li><a class="bottomHover" href="#">About</a></li>
-          <li><a class="bottomHover active" href="#">Blog</a></li>
-          <li><a class="bottomHover" href="./contact.html">Contact</a></li>
+          <li><a class="bottonHover" href="./index.html">Home</a></li>
+          <li><a class="bottonHover" href="#">About</a></li>
+          <li><a class="bottonHover active" href="#">Blog</a></li>
+          <li><a class="bottonHover" href="./contact.html">Contact</a></li>
         </ul>
       </nav>
       <h2>Blog</h2>
     </header>
     <main class="mainBlog">
-      <section>
-        <img src="./assets/images/post-image.jpg" alt="" />
+      <section class="blogSection">
+        <img class="blogImage" src="./assets/images/post-image.jpg" alt="" />
         <article>
           <h3>Come and discover our space</h3>
           <p>Monday May 5th, 2019 by<span>Saron</span></p>
@@ -64,10 +64,11 @@
             accusamus aliquid recusandae hic!
           </p>
         </article>
-        <div class="comments">
-          <div>
-            <img src="../assets/images/comment-image.jpg" alt="" />
-            <div>
+        <div class="commentsDiv">
+          <h3>Comments:</h3>
+          <div class="comment commentContent1">
+            <img src="./assets/images/comment-image.jpg" alt="" />
+            <div class="commentDetails">
               <h6>Tuesday October 9th, 2019 by Davin</h6>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae,
@@ -77,9 +78,9 @@
               </p>
             </div>
           </div>
-          <div>
-            <img src="../assets/images/comment-image2.jpg" alt="" />
-            <div>
+          <div class="comment commentContent2">
+            <img src="./assets/images/comment-image2.jpg" alt="" />
+            <div class="commentDetails">
               <h6>Wednesday October 10th, 2019 by Lisa</h6>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae,
@@ -110,28 +111,34 @@
         </div>
       </section>
       <aside>
-        <img src="../assets/images/sidebar-image.jpg" alt="" />
-        <div>
-          <h5>Our mission</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            delectus quasi odio optio et, animi recusandae accusantium
-            veritatis. Eveniet accusamus aliquid iusto est beatae blanditiis
-            quaerat dolores dolorem voluptate molestias!
-          </p>
-        </div>
-        <div>
-          <h4>Recent Posts</h4>
-          <ul>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Aperiam delectus quasi odio</li>
-            <li>aliquid iusto est beatae</li>
-          </ul>
+        <img src="./assets/images/sidebar-image.jpg" alt="" />
+        <div class="asideContent">
+          <div>
+            <h5>Our mission</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              delectus quasi odio optio et, animi recusandae accusantium
+              veritatis. Eveniet accusamus aliquid iusto est beatae blanditiis
+              quaerat dolores dolorem voluptate molestias!
+            </p>
+          </div>
+          <div>
+            <h5>Recent Posts</h5>
+            <ul>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Aperiam delectus quasi odio</li>
+              <li>aliquid iusto est beatae</li>
+            </ul>
+          </div>
         </div>
       </aside>
     </main>
-    <footer>Copyright ⓒ 2020 Juno College</footer>
+    <footer>
+      <p>
+        Copyright ⓒ 2020 Juno College
+      </p>
+    </footer>
     <script
       src="https://kit.fontawesome.com/ce1aa3e8a3.js"
       crossorigin="anonymous"

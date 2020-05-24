@@ -3,6 +3,7 @@
 // $marigold: #FFC600;
 // $mudGreen: #555F02;
 // $camoGreen: #1E140E;
+
 .mainHome section:nth-child(even) {
   background-color: $charcoal;
 }
@@ -58,8 +59,16 @@
   display: flex;
   justify-content: space-between;
   padding: 100px 0;
-  img:nth-of-type(2) {
-    padding: 0 25px;
+  img {
+    transition: ease-in-out 0.5s;
+    &:nth-of-type(2) {
+      padding: 0 25px;
+    }
+    &:hover,
+    &:focus {
+      z-index: 10;
+      transform: scale(1.1);
+    }
   }
 }
 

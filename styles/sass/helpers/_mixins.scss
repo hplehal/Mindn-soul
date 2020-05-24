@@ -1,15 +1,12 @@
-
-@mixin fontMixin($font, $fontSize, $color ) {
-    font-family: $font;
-    font-size: $fontSize;
-    color: $color;
+@mixin fontMixin($font, $fontSize, $color) {
+  font-family: $font;
+  font-size: $fontSize;
+  color: $color;
 }
 
-// @mixin dokdoFont($fontsize) {
-//     font-family: $dokdo;
-//     font-size: $fontsize;
-// }
-// @mixin latoFont($fontsize) {
-//     font-family:$lato;
-//     font-size: $fontsize;
-// }
+@mixin headerBackground($url, $repeat, $backgroundSize, $position) {
+  background-image: $url;
+  background-repeat: $repeat;
+  background-size: $backgroundSize;
+  background-position: $position;
+}

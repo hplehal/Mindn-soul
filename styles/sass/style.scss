@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap");
 // Helpers
-@import 'helpers/parameters';
-@import 'helpers/mixins';
+@import "helpers/variables";
+@import "helpers/mixins";
 
 // Components
-@import 'components/setup';
-@import 'components/global';
-@import 'components/nav';
-@import 'components/buttons';
-@import 'components/footer';
+@import "components/setup";
+@import "components/global";
+@import "components/nav";
+@import "components/buttons";
+@import "components/forms";
+@import "components/footer";
 
 // Pages
-@import 'pages/home';
-@import 'pages/contact';
-@import 'pages/blog';
+@import "pages/home";
+@import "pages/blog";
+@import "pages/contact";
 
 // layouts
-@import 'layouts/responsive';
-
+@import "layouts/responsive";
 
 body {
-    background-color: $camoGreen;
-    color: $iceBlue;
+  background-color: $camoGreen;
+  color: $iceBlue;
 }

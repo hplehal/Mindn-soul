@@ -1,9 +1,17 @@
+// $iceBlue: #FAFFFE;
+// $charcoal: #262725;
+// $marigold: #FFC600;
+// $mudGreen: #555F02;
+// $camoGreen: #1E140E;
+
 .headerContact {
-  background-image: url(../assets/images/contact-image-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
+  @include headerBackground(
+    url(../assets/images/contact-image-1.jpg),
+    no-repeat,
+    cover,
+    center
+  );
+  //   height: 60vh;
   h2 {
     padding: 150px;
   }

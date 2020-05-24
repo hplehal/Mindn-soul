@@ -1,8 +1,14 @@
+body {
+  background-color: $camoGreen;
+  color: $iceBlue;
+}
+
 h2 {
   @include fontMixin($dokdo, 105px, $marigold);
   line-height: 69.6px;
   letter-spacing: 10.9px;
 }
+
 h3 {
   @include fontMixin($dokdo, 45px, $marigold);
   line-height: 58px;
@@ -15,12 +21,30 @@ h4 {
   letter-spacing: 4.3px;
 }
 
+h5 {
+  @include fontMixin($dokdo, 25px, $iceBlue);
+}
+
+h6 {
+  @include fontMixin($lato, 20px, $marigold);
+  padding-bottom: 20px;
+}
+
 p,
 a {
   @include fontMixin($lato, 20px, $iceBlue);
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+button[type="submit"] {
+  margin: 15px;
+  padding: 20px 5px;
+  color: $iceBlue;
 }
 
 .wrapper {
