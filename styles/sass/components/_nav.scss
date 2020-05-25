@@ -3,6 +3,11 @@ nav {
   justify-content: space-between;
   padding: 25px 150px;
 }
+@include responsiveMedia(smallTablet) {
+  .menu {
+    display: none;
+  }
+}
 .menu ul {
   display: flex;
   flex-basis: 20%;

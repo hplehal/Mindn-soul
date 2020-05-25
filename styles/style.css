@@ -450,6 +450,12 @@ nav {
   padding: 25px 150px;
 }
 
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
+
 .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1148,6 +1154,18 @@ footer {
           justify-content: space-between;
 }
 
+@media (max-width: 900px) {
+  .mainBlog {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .blogSection {
   position: relative;
   bottom: 150px;
@@ -1170,12 +1188,37 @@ footer {
   margin-bottom: 25px;
 }
 
+@media (max-width: 900px) {
+  .blogSection article {
+    padding: 50px 25px;
+    border-left: 5px solid #555f02;
+  }
+}
+
+@media (max-width: 900px) {
+  .blogSection {
+    width: 80%;
+    bottom: 0;
+    margin: 50px 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .commentsDiv {
   padding: 50px 30px 50px 100px;
 }
 
 .commentsDiv h3 {
+  margin-top: 50px;
   color: #fafffe;
+}
+
+@media (max-width: 900px) {
+  .commentsDiv {
+    padding: 0;
+  }
 }
 
 .comment {
@@ -1192,10 +1235,23 @@ footer {
   width: 100px;
   height: 100px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .comment .commentDetails {
   padding-left: 50px;
+}
+
+@media (max-width: 600px) {
+  .comment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 aside {
@@ -1209,9 +1265,28 @@ aside img {
   width: 93%;
 }
 
+@media (max-width: 900px) {
+  aside img {
+    width: 50%;
+    margin: 0 0 0 20px;
+  }
+}
+
 aside .asideContent {
   padding: 20px;
   background-color: #555f02;
+}
+
+@media (max-width: 900px) {
+  aside {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #555f02;
+    width: 85%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .recentPosts {

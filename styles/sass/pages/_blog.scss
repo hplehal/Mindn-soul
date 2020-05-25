@@ -28,6 +28,10 @@
 .mainBlog {
   display: flex;
   justify-content: space-between;
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .blogSection {
@@ -45,13 +49,27 @@
     p {
       margin-bottom: 25px;
     }
+    @include responsiveMedia(smallTablet) {
+      padding: 50px 25px;
+      border-left: 5px solid $mudGreen;
+    }
+  }
+  @include responsiveMedia(smallTablet) {
+    width: 80%;
+    bottom: 0;
+    margin: 50px 0;
+    order: 2;
   }
 }
 
 .commentsDiv {
   padding: 50px 30px 50px 100px;
   h3 {
+    margin-top: 50px;
     color: $iceBlue;
+  }
+  @include responsiveMedia(smallTablet) {
+    padding: 0;
   }
 }
 
@@ -63,9 +81,14 @@
     width: 100px;
     height: 100px;
     margin-left: 20px;
+    margin-bottom: 20px;
   }
   .commentDetails {
     padding-left: 50px;
+  }
+  @include responsiveMedia(phone) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -76,10 +99,22 @@ aside {
     box-shadow: -20px 20px $mudGreen;
     margin: 150px 0 0 20px;
     width: 93%;
+    @include responsiveMedia(smallTablet) {
+      width: 50%;
+      margin: 0 0 0 20px;
+    }
   }
   .asideContent {
     padding: 20px;
     background-color: $mudGreen;
+  }
+  @include responsiveMedia(smallTablet) {
+    // position: absolute;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: $mudGreen;
+    width: 85%;
+    order: 1;
   }
 }
 
