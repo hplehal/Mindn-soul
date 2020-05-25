@@ -19,12 +19,20 @@
 
 .contactSection {
   display: flex;
+  @include responsiveMedia(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contactInfo {
   margin: 150px;
   p:nth-of-type(1) {
     padding: 10px 0 25px;
+  }
+  @include responsiveMedia(tablet) {
+    text-align: center;
   }
 }
 
@@ -41,5 +49,9 @@
         color: $iceBlue;
       }
     }
+  }
+  @include responsiveMedia(tablet) {
+    justify-content: center;
+    margin-left: 25px;
   }
 }

@@ -82,3 +82,15 @@ aside {
     background-color: $mudGreen;
   }
 }
+
+.recentPosts {
+  margin: 20px 0;
+  li::before {
+    content: "\2022";
+    color: $marigold;
+    font-weight: bold;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 20px;
+    margin-left: 10px;
+  }
+}

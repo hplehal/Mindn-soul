@@ -31,7 +31,8 @@ h6 {
 }
 
 p,
-a {
+a,
+li {
   @include fontMixin($lato, 18px, $iceBlue);
   font-weight: 300;
   line-height: 32px;
@@ -47,4 +48,8 @@ i {
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.hamburger {
+  display: none;
 }

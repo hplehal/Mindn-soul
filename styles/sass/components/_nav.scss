@@ -3,7 +3,7 @@ nav {
   justify-content: space-between;
   padding: 25px 150px;
 }
-.menu {
+.menu ul {
   display: flex;
   flex-basis: 20%;
 }
@@ -55,6 +55,8 @@ nav {
 
 .logoDiv {
   position: relative;
+  width: 100%;
+  height: 32px;
 }
 
 .logoWrapper {

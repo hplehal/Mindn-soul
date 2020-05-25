@@ -415,7 +415,8 @@ h6 {
 }
 
 p,
-a {
+a,
+li {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: #fafffe;
@@ -435,6 +436,10 @@ i {
   margin: 0 auto;
 }
 
+.hamburger {
+  display: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,7 +450,7 @@ nav {
   padding: 25px 150px;
 }
 
-.menu {
+.menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,6 +519,8 @@ nav {
 
 .logoDiv {
   position: relative;
+  width: 100%;
+  height: 32px;
 }
 
 .logoWrapper:before {
@@ -607,6 +614,79 @@ nav {
           transform: scaleX(1);
 }
 
+.hamburgerCheckbox {
+  visibility: hidden;
+}
+
+label,
+label::before,
+label::after {
+  position: fixed;
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fafffe;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  z-index: 100;
+}
+
+label {
+  cursor: pointer;
+  top: 80px;
+  right: 80px;
+  margin-left: -50px;
+  margin-top: -7.5px;
+}
+
+label::before {
+  content: "";
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+label::after {
+  content: "";
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.hamburgerCheckbox:checked + label {
+  width: 0px;
+}
+
+.hamburgerCheckbox:checked + label::before {
+  -webkit-transform: rotate(45deg) translate(0px);
+          transform: rotate(45deg) translate(0px);
+}
+
+.hamburgerCheckbox:checked + label::after {
+  -webkit-transform: rotate(-45deg) translate(0px);
+          transform: rotate(-45deg) translate(0px);
+}
+
+.hamburgerList {
+  position: absolute;
+  width: 300px;
+  margin: 100px 300px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #ffc600;
+  list-style-type: none;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.hamburgerList a {
+  text-decoration: none;
+}
+
 .contactForm {
   position: relative;
   bottom: 100px;
@@ -614,13 +694,20 @@ nav {
   background-color: #262725;
   -webkit-box-shadow: 20px 20px #ffc600;
           box-shadow: 20px 20px #ffc600;
+  width: 70%;
+}
+
+@media (max-width: 1200px) {
+  .contactForm {
+    width: 100%;
+  }
 }
 
 form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   grid-gap: 20px;
 }
 
@@ -767,6 +854,35 @@ footer {
   padding-right: 30px;
 }
 
+@media (max-width: 900px) {
+  .aboutSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .aboutSection img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 40px;
+  }
+  .aboutSection .aboutContent {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0;
+    text-align: center;
+  }
+}
+
 .gallerySection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,6 +908,30 @@ footer {
           transform: scale(1.1);
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  .gallerySection img {
+    width: 70%;
+  }
+  .gallerySection img:nth-of-type(2) {
+    margin: 25px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallerySection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .infoSection {
@@ -855,16 +995,63 @@ footer {
           justify-content: space-between;
 }
 
+@media (max-width: 1200px) {
+  .homeBlog1,
+  .homeBlog2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .homeBlog1,
+  .homeBlog2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .homeBlog1 .blogContent,
 .homeBlog2 .blogContent {
-  width: 30%;
-  margin: auto;
+  width: 35%;
+  margin: 50px auto;
+}
+
+@media (max-width: 1200px) {
+  .homeBlog1 .blogContent,
+  .homeBlog2 .blogContent {
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .homeBlog1 .blogContent,
+  .homeBlog2 .blogContent {
+    width: 70%;
+  }
 }
 
 .homeBlog1 img,
 .homeBlog2 img {
   width: 40%;
   height: 40%;
+}
+
+@media (max-width: 1200px) {
+  .homeBlog1 img,
+  .homeBlog2 img {
+    min-width: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .homeBlog1 img,
+  .homeBlog2 img {
+    width: 90%;
+  }
 }
 
 .homeBlog1 img {
@@ -881,6 +1068,14 @@ footer {
   text-align: right;
 }
 
+@media (max-width: 900px) {
+  .homeBlog2 .blogContent {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .homeBlog2 img {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -889,6 +1084,15 @@ footer {
   top: 40px;
   -webkit-box-shadow: -25px 25px #ffc600;
           box-shadow: -25px 25px #ffc600;
+}
+
+@media (max-width: 900px) {
+  .homeBlog2 img {
+    margin-bottom: 50px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .freeTrialSection img {
@@ -1010,6 +1214,20 @@ aside .asideContent {
   background-color: #555f02;
 }
 
+.recentPosts {
+  margin: 20px 0;
+}
+
+.recentPosts li::before {
+  content: "\2022";
+  color: #ffc600;
+  font-weight: bold;
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 20px;
+  margin-left: 10px;
+}
+
 .headerContact {
   background-image: url(../assets/images/contact-image-1.jpg);
   background-repeat: no-repeat;
@@ -1028,12 +1246,33 @@ aside .asideContent {
   display: flex;
 }
 
+@media (max-width: 1200px) {
+  .contactSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .contactInfo {
   margin: 150px;
 }
 
 .contactInfo p:nth-of-type(1) {
   padding: 10px 0 25px;
+}
+
+@media (max-width: 1200px) {
+  .contactInfo {
+    text-align: center;
+  }
 }
 
 .socialMediaIcons {
@@ -1056,4 +1295,13 @@ aside .asideContent {
 
 .socialMediaIcons li i:hover, .socialMediaIcons li ifocus {
   color: #fafffe;
+}
+
+@media (max-width: 1200px) {
+  .socialMediaIcons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25px;
+  }
 }

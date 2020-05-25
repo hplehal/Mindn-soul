@@ -4,10 +4,14 @@
   padding: 50px;
   background-color: $charcoal;
   box-shadow: 20px 20px $marigold;
+  width: 70%;
+  @include responsiveMedia(tablet) {
+    width: 100%;
+  }
 }
 form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-gap: 20px;
 }
 

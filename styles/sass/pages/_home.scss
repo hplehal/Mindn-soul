@@ -54,6 +54,21 @@
     width: 65%;
     padding-right: 30px;
   }
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      order: 1;
+      margin-bottom: 40px;
+    }
+    .aboutContent {
+      order: 2;
+      padding: 0;
+      text-align: center;
+    }
+  }
 }
 
 .gallerySection {
@@ -71,6 +86,17 @@
       transform: scale(1.1);
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
     }
+    @include responsiveMedia(smallTablet) {
+      width: 70%;
+      &:nth-of-type(2) {
+        margin: 25px 0;
+      }
+    }
+  }
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -109,13 +135,32 @@
 .homeBlog2 {
   display: flex;
   justify-content: space-between;
+  @include responsiveMedia(tablet) {
+    align-items: center;
+  }
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+  }
+
   .blogContent {
-    width: 30%;
-    margin: auto;
+    width: 35%;
+    margin: 50px auto;
+    @include responsiveMedia(tablet) {
+      width: 45%;
+    }
+    @include responsiveMedia(smallTablet) {
+      width: 70%;
+    }
   }
   img {
     width: 40%;
     height: 40%;
+    @include responsiveMedia(tablet) {
+      min-width: 30%;
+    }
+    @include responsiveMedia(smallTablet) {
+      width: 90%;
+    }
   }
 }
 .homeBlog1 {
@@ -130,12 +175,19 @@
   .blogContent {
     order: 1;
     text-align: right;
+    @include responsiveMedia(smallTablet) {
+      order: 2;
+    }
   }
   img {
     order: 2;
     position: relative;
     top: 40px;
     box-shadow: -25px 25px $marigold;
+    @include responsiveMedia(smallTablet) {
+      margin-bottom: 50px;
+      order: 1;
+    }
   }
 }
 

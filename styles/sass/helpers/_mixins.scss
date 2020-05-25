@@ -10,3 +10,21 @@
   background-size: $backgroundSize;
   background-position: $position;
 }
+
+@mixin responsiveMedia($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == smallTablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
