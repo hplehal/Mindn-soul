@@ -10,17 +10,6 @@
   &:checked ~ .hamburgerList {
     transform: translateX(0rem);
   }
-  &:checked ~ .headerContact .hamburgerList {
-    @include responsiveMedia(phone) {
-      transform: translateX(-3rem);
-    }
-  }
-}
-
-.headerBlog .hamburgerList {
-  //   @include responsiveMedia(phone) {
-  //
-  //   }
 }
 
 .hamburgerList {
@@ -75,12 +64,12 @@
     z-index: 100;
   }
 }
-.headerContact .hamburgerIcon {
-  @include responsiveMedia(phone) {
-    top: 30px;
-    right: 100px;
-  }
-}
+// .headerContact .hamburgerIcon {
+//   @include responsiveMedia(phone) {
+//     top: 30px;
+//     right: 100px;
+//   }
+// }
 
 .hamburgerCheckbox:checked ~ .hamburgerIcon > div {
   background-color: $iceBlue;
