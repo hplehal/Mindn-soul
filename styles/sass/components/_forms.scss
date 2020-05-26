@@ -6,7 +6,7 @@
   box-shadow: 20px 20px $marigold;
   width: 70%;
   @include responsiveMedia(tablet) {
-    width: 100%;
+    width: 85%;
   }
   @include responsiveMedia(smallTablet) {
     padding: 30px;
