@@ -9,8 +9,9 @@
     url(../assets/images/blog-image-1.jpg),
     no-repeat,
     cover,
-    center
+    80%
   );
+
   height: 60vh;
   h2 {
     padding: 150px;
@@ -82,6 +83,9 @@
     height: 100px;
     margin-left: 20px;
     margin-bottom: 20px;
+    @include responsiveMedia(phone) {
+      display: none;
+    }
   }
   .commentDetails {
     padding-left: 50px;
@@ -89,6 +93,9 @@
   @include responsiveMedia(phone) {
     flex-direction: column;
     align-items: center;
+    .commentDetails {
+      padding: 0;
+    }
   }
 }
 
@@ -102,6 +109,9 @@ aside {
     @include responsiveMedia(smallTablet) {
       width: 50%;
       margin: 0 0 0 20px;
+    }
+    @include responsiveMedia(phone) {
+      display: none;
     }
   }
   .asideContent {

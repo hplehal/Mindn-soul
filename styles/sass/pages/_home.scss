@@ -12,10 +12,12 @@
 }
 
 .headerHome {
-  background-image: url(../assets/images/home-image-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include headerBackground(
+    url(../assets/images/home-image-1.jpg),
+    no-repeat,
+    cover,
+    80%
+  );
   //   width: 100vw;
 }
 
@@ -38,6 +40,9 @@
     position: relative;
     top: 100px;
     width: 40%;
+    @include responsiveMedia(smallTablet) {
+      display: none;
+    }
   }
 }
 
@@ -49,25 +54,26 @@
     width: 300px;
     height: 300px;
     box-shadow: -15px 15px $mudGreen;
+    @include responsiveMedia(smallTablet) {
+      order: 1;
+      margin-bottom: 40px;
+    }
   }
   .aboutContent {
     width: 65%;
     padding-right: 30px;
+    @include responsiveMedia(smallTablet) {
+      order: 2;
+      padding: 0;
+      text-align: center;
+    }
   }
   @include responsiveMedia(smallTablet) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    img {
-      order: 1;
-      margin-bottom: 40px;
-    }
-    .aboutContent {
-      order: 2;
-      padding: 0;
-      text-align: center;
-    }
+    padding: 50px 0 50px;
   }
 }
 
@@ -97,6 +103,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0;
   }
 }
 
@@ -150,6 +157,7 @@
     }
     @include responsiveMedia(smallTablet) {
       width: 70%;
+      text-align: center;
     }
   }
   img {
@@ -159,7 +167,7 @@
       min-width: 30%;
     }
     @include responsiveMedia(smallTablet) {
-      width: 90%;
+      width: 70%;
     }
   }
 }
@@ -168,6 +176,11 @@
     position: relative;
     bottom: 40px;
     box-shadow: 25px 25px $marigold;
+    @include responsiveMedia(smallTablet) {
+      bottom: 0;
+      margin-top: 50px;
+      box-shadow: 15px 15px $marigold;
+    }
   }
 }
 
@@ -177,6 +190,7 @@
     text-align: right;
     @include responsiveMedia(smallTablet) {
       order: 2;
+      text-align: center;
     }
   }
   img {
@@ -187,6 +201,7 @@
     @include responsiveMedia(smallTablet) {
       margin-bottom: 50px;
       order: 1;
+      box-shadow: -15px 15px $marigold;
     }
   }
 }
@@ -202,4 +217,8 @@
   width: 80%;
   margin: 0 auto;
   padding: 100px;
+  @include responsiveMedia(phone) {
+    padding: 50px 0;
+    width: 80%;
+  }
 }
