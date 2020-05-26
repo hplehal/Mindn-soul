@@ -4,6 +4,7 @@
 // $mudGreen: #555F02;
 // $camoGreen: #1E140E;
 
+// Contacts Page Partial
 .headerContact {
   @include headerBackground(
     url(../assets/images/contact-image-1.jpg),
@@ -25,12 +26,12 @@
 
 .contactInfo {
   margin: 150px;
-  p:nth-of-type(1) {
-    padding: 10px 0 25px;
-  }
   @include responsiveMedia(tablet) {
     text-align: center;
     margin: 100px 0;
+  }
+  p:nth-of-type(1) {
+    padding: 10px 0 25px;
   }
 }
 
@@ -38,6 +39,10 @@
   display: flex;
   justify-content: flex-start;
   color: $marigold;
+  @include responsiveMedia(tablet) {
+    justify-content: center;
+    margin-left: 25px;
+  }
   li {
     padding-right: 25px;
     i {
@@ -47,9 +52,5 @@
         color: $iceBlue;
       }
     }
-  }
-  @include responsiveMedia(tablet) {
-    justify-content: center;
-    margin-left: 25px;
   }
 }

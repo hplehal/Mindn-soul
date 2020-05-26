@@ -1,9 +1,13 @@
+// Mixins Partial
+
+// fonts
 @mixin fontMixin($font, $fontSize, $color) {
   font-family: $font;
   font-size: $fontSize;
   color: $color;
 }
 
+// header background
 @mixin headerBackground($url, $repeat, $backgroundSize, $position) {
   background-image: $url;
   background-repeat: $repeat;
@@ -11,6 +15,7 @@
   background-position-x: $position;
 }
 
+// Checks each media query
 @mixin responsiveMedia($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 600px) {

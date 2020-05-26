@@ -4,6 +4,8 @@
 // $mudGreen: #555F02;
 // $camoGreen: #1E140E;
 
+// Home Page Partial
+
 .mainHome section:nth-child(even) {
   background-color: $charcoal;
 }
@@ -18,7 +20,6 @@
     cover,
     80%
   );
-  //   width: 100vw;
 }
 
 .headerContent {
@@ -92,6 +93,12 @@
   display: flex;
   justify-content: space-between;
   padding: 100px 0;
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
   img {
     transition: ease-in-out 0.5s;
     &:nth-of-type(2) {
@@ -109,12 +116,6 @@
         margin: 25px 0;
       }
     }
-  }
-  @include responsiveMedia(smallTablet) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
   }
 }
 

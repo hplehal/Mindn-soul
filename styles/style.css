@@ -465,9 +465,17 @@ i {
 }
 
 .wrapper {
-  width: 80%;
+  width: 80vw;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  background-color: #262725;
+  color: #fafffe;
+  text-align: center;
+  padding: 20px;
 }
 
 nav {
@@ -1484,7 +1492,6 @@ aside .asideContent {
   color: #ffc600;
   font-weight: bold;
   display: inline-block;
-  /* Needed to add space between the bullet and the text */
   width: 20px;
   margin-left: 10px;
 }
@@ -1522,15 +1529,15 @@ aside .asideContent {
   margin: 150px;
 }
 
-.contactInfo p:nth-of-type(1) {
-  padding: 10px 0 25px;
-}
-
 @media (max-width: 1200px) {
   .contactInfo {
     text-align: center;
     margin: 100px 0;
   }
+}
+
+.contactInfo p:nth-of-type(1) {
+  padding: 10px 0 25px;
 }
 
 .socialMediaIcons {
@@ -1543,6 +1550,15 @@ aside .asideContent {
   color: #ffc600;
 }
 
+@media (max-width: 1200px) {
+  .socialMediaIcons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25px;
+  }
+}
+
 .socialMediaIcons li {
   padding-right: 25px;
 }
@@ -1553,13 +1569,4 @@ aside .asideContent {
 
 .socialMediaIcons li i:hover, .socialMediaIcons li ifocus {
   color: #fafffe;
-}
-
-@media (max-width: 1200px) {
-  .socialMediaIcons {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-left: 25px;
-  }
 }

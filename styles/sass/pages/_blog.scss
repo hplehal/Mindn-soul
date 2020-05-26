@@ -4,6 +4,8 @@
 // $mudGreen: #555F02;
 // $camoGreen: #1E140E;
 
+// Blog Partials
+
 .headerBlog {
   height: 60vh;
   @include headerBackground(
@@ -115,7 +117,6 @@ aside {
     background-color: $mudGreen;
   }
   @include responsiveMedia(smallTablet) {
-    // position: absolute;
     margin-top: 50px;
     padding: 30px;
     background-color: $mudGreen;
@@ -130,7 +131,7 @@ aside {
     content: "\2022";
     color: $marigold;
     font-weight: bold;
-    display: inline-block; /* Needed to add space between the bullet and the text */
+    display: inline-block;
     width: 20px;
     margin-left: 10px;
   }

@@ -1,3 +1,5 @@
+// Hamburger Partial
+
 .hamburgerMenu {
   display: none;
   @include responsiveMedia(smallTablet) {
@@ -23,9 +25,6 @@
   z-index: 1;
   transition: linear 0.5s;
   opacity: 0.8;
-  //   @include responsiveMedia(phone) {
-  //     width: 80%;
-  //   }
 }
 
 .hamburgerLinks {
@@ -53,10 +52,6 @@
   justify-content: space-between;
   flex-direction: column;
   z-index: 100;
-  //   @include responsiveMedia(phone) {
-  //     top: 40px;
-  //     right: 100px;
-  //   }
   & > div {
     height: 4px;
     background-color: $marigold;
@@ -64,12 +59,6 @@
     z-index: 100;
   }
 }
-// .headerContact .hamburgerIcon {
-//   @include responsiveMedia(phone) {
-//     top: 30px;
-//     right: 100px;
-//   }
-// }
 
 .hamburgerCheckbox:checked ~ .hamburgerIcon > div {
   background-color: $iceBlue;

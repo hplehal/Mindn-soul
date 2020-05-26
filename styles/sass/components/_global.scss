@@ -1,3 +1,5 @@
+// Global Partial
+
 body {
   background-color: $camoGreen;
   color: $iceBlue;
@@ -62,7 +64,15 @@ i {
 }
 
 .wrapper {
-  width: 80%;
+  width: 80vw;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  background-color: $charcoal;
+  color: $iceBlue;
+  text-align: center;
+  padding: 20px;
 }
