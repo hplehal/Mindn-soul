@@ -692,7 +692,7 @@ nav {
 }
 
 .hamburgerList {
-  background: #555f02;
+  background: #1e140e;
   width: 60%;
   height: 100vh;
   position: fixed;
@@ -703,7 +703,7 @@ nav {
   z-index: 1;
   -webkit-transition: linear 0.5s;
   transition: linear 0.5s;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .hamburgerLinks {
