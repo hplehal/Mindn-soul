@@ -120,14 +120,18 @@
 
 .infoSection {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 50px 0 150px;
+  @include responsiveMedia(smallTablet) {
+    flex-direction: column;
+  }
 }
 .infoContent {
   display: flex;
   flex: 1 0 50%;
-  margin-bottom: 50px;
-  padding-right: 20px;
+  padding-bottom: 50px;
+  //   padding-right: 20px;
   .iconHolder {
     display: flex;
     justify-content: center;
