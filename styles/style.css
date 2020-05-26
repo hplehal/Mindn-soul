@@ -391,6 +391,13 @@ h3 {
   color: #ffc600;
   line-height: 58px;
   letter-spacing: 4.9px;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 30px;
+  }
 }
 
 h4 {
@@ -423,6 +430,14 @@ li {
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  p,
+  a,
+  li {
+    font-size: 16px;
+  }
 }
 
 i {
@@ -826,10 +841,23 @@ footer {
   color: #ffc600;
 }
 
+@media (max-width: 900px) {
+  .headerContent div h1 {
+    font-size: 61px;
+  }
+}
+
 .headerContent div h3 {
   font-family: "Lato", sans-serif;
   font-size: 45px;
   color: #fafffe;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .headerContent div h3 {
+    font-size: 30px;
+  }
 }
 
 .headerContent img {
@@ -841,6 +869,15 @@ footer {
 @media (max-width: 900px) {
   .headerContent img {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerContent {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-bottom: 200px;
   }
 }
 
@@ -1155,6 +1192,7 @@ footer {
   .freeTrialContent {
     padding: 50px 0;
     width: 80%;
+    text-align: center;
   }
 }
 

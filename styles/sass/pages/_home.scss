@@ -31,9 +31,16 @@
     padding: 100px 0 0 40px;
     h1 {
       @include fontMixin($dokdo, 115px, $marigold);
+      @include responsiveMedia(smallTablet) {
+        font-size: 61px;
+      }
     }
     h3 {
       @include fontMixin($lato, 45px, $iceBlue);
+      font-weight: 300;
+      @include responsiveMedia(smallTablet) {
+        font-size: 30px;
+      }
     }
   }
   img {
@@ -43,6 +50,10 @@
     @include responsiveMedia(smallTablet) {
       display: none;
     }
+  }
+  @include responsiveMedia(smallTablet) {
+    justify-content: flex-start;
+    padding-bottom: 200px;
   }
 }
 
@@ -220,5 +231,6 @@
   @include responsiveMedia(phone) {
     padding: 50px 0;
     width: 80%;
+    text-align: center;
   }
 }
