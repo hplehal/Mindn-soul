@@ -687,8 +687,8 @@ nav {
 }
 
 .hamburgerCheckbox:checked ~ .hamburgerList {
-  -webkit-transform: translateX(0rem);
-          transform: translateX(0rem);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .hamburgerList {
@@ -696,8 +696,8 @@ nav {
   width: 60%;
   height: 100vh;
   position: fixed;
-  -webkit-transform: translateX(60rem);
-          transform: translateX(60rem);
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
   top: 0;
   right: 0;
   z-index: 1;
@@ -719,7 +719,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 40vh;
+  margin-top: 30vh;
 }
 
 .hamburgerLinks li {
@@ -889,14 +889,6 @@ textarea {
           transform: translateY(-3px);
 }
 
-footer {
-  width: 100%;
-  background-color: #262725;
-  color: #fafffe;
-  text-align: center;
-  padding: 20px;
-}
-
 .mainHome section:nth-child(even) {
   background-color: #262725;
 }
@@ -1049,6 +1041,22 @@ footer {
   padding: 100px 0;
 }
 
+@media (max-width: 900px) {
+  .gallerySection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0;
+  }
+}
+
 .gallerySection img {
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
@@ -1072,22 +1080,6 @@ footer {
   }
   .gallerySection img:nth-of-type(2) {
     margin: 25px 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .gallerySection {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 50px 0;
   }
 }
 
