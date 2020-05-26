@@ -683,6 +683,13 @@ nav {
           transform: translateX(0rem);
 }
 
+@media (max-width: 600px) {
+  .hamburgerCheckbox:checked ~ .headerContact .hamburgerList {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+}
+
 .hamburgerList {
   background: #555f02;
   width: 60%;
@@ -724,7 +731,7 @@ nav {
   color: #fafffe;
 }
 
-.hamburgerButton {
+.hamburgerIcon {
   position: fixed;
   cursor: pointer;
   width: 32px;
@@ -744,7 +751,7 @@ nav {
   z-index: 100;
 }
 
-.hamburgerButton > div {
+.hamburgerIcon > div {
   height: 4px;
   background-color: #ffc600;
   -webkit-transition: 0.5s;
@@ -753,26 +760,26 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .hamburgerButton {
-    top: 80;
-    right: 80;
+  .headerContact .hamburgerIcon {
+    top: 30px;
+    right: 100px;
   }
 }
 
-.hamburgerCheckbox:checked ~ .hamburgerButton > div {
+.hamburgerCheckbox:checked ~ .hamburgerIcon > div {
   background-color: #fafffe;
 }
 
-.hamburgerCheckbox:checked ~ .hamburgerButton > div:nth-child(2) {
+.hamburgerCheckbox:checked ~ .hamburgerIcon > div:nth-child(2) {
   opacity: 0;
 }
 
-.hamburgerCheckbox:checked ~ .hamburgerButton > div:nth-child(1) {
+.hamburgerCheckbox:checked ~ .hamburgerIcon > div:nth-child(1) {
   -webkit-transform: translateY(14px) rotate(45deg);
           transform: translateY(14px) rotate(45deg);
 }
 
-.hamburgerCheckbox:checked ~ .hamburgerButton > div:nth-child(3) {
+.hamburgerCheckbox:checked ~ .hamburgerIcon > div:nth-child(3) {
   -webkit-transform: translateY(-14px) rotate(-45deg);
           transform: translateY(-14px) rotate(-45deg);
 }
@@ -795,7 +802,7 @@ nav {
 
 @media (max-width: 900px) {
   .contactForm {
-    padding: 35px;
+    padding: 30px;
     bottom: 0;
     margin-top: 50px;
   }
@@ -826,7 +833,7 @@ textarea {
   input[type="text"],
   input[type="email"],
   textarea {
-    margin: 5px;
+    margin: 15px;
     font-size: 16px;
   }
 }

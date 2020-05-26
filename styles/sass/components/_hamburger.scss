@@ -10,6 +10,17 @@
   &:checked ~ .hamburgerList {
     transform: translateX(0rem);
   }
+  &:checked ~ .headerContact .hamburgerList {
+    @include responsiveMedia(phone) {
+      transform: translateX(-3rem);
+    }
+  }
+}
+
+.headerBlog .hamburgerList {
+  //   @include responsiveMedia(phone) {
+  //
+  //   }
 }
 
 .hamburgerList {
@@ -23,6 +34,9 @@
   z-index: 1;
   transition: linear 0.5s;
   opacity: 0.8;
+  //   @include responsiveMedia(phone) {
+  //     width: 80%;
+  //   }
 }
 
 .hamburgerLinks {
@@ -39,7 +53,7 @@
   }
 }
 
-.hamburgerButton {
+.hamburgerIcon {
   position: fixed;
   cursor: pointer;
   width: 32px;
@@ -50,19 +64,25 @@
   justify-content: space-between;
   flex-direction: column;
   z-index: 100;
+  //   @include responsiveMedia(phone) {
+  //     top: 40px;
+  //     right: 100px;
+  //   }
   & > div {
     height: 4px;
     background-color: $marigold;
     transition: 0.5s;
     z-index: 100;
   }
+}
+.headerContact .hamburgerIcon {
   @include responsiveMedia(phone) {
-    top: 80;
-    right: 80;
+    top: 30px;
+    right: 100px;
   }
 }
 
-.hamburgerCheckbox:checked ~ .hamburgerButton > div {
+.hamburgerCheckbox:checked ~ .hamburgerIcon > div {
   background-color: $iceBlue;
 
   &:nth-child(2) {
