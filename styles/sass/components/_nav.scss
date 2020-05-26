@@ -3,17 +3,19 @@ nav {
   justify-content: space-between;
   padding: 25px 150px;
 }
+
 @include responsiveMedia(smallTablet) {
   .menu {
     display: none;
   }
 }
+
 .menu ul {
   display: flex;
   flex-basis: 20%;
 }
-.menu li {
-  display: flex;
+.menu li,
+.hamburgerLinks li {
   margin: 0 25px;
   position: relative;
   //   inspired by Thomas Aufresne CodePen
@@ -60,7 +62,7 @@ nav {
 
 .logoDiv {
   position: relative;
-  width: 100%;
+  width: 230px;
   height: 32px;
 }
 

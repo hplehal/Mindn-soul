@@ -13,9 +13,8 @@ h3 {
   @include fontMixin($dokdo, 45px, $marigold);
   line-height: 58px;
   letter-spacing: 4.9px;
-  font-weight: 300;
   @include responsiveMedia(smallTablet) {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 
@@ -23,6 +22,9 @@ h4 {
   @include fontMixin($dokdo, 40px, $marigold);
   line-height: 58px;
   letter-spacing: 4.3px;
+  @include responsiveMedia(smallTablet) {
+    font-size: 30px;
+  }
 }
 
 h5 {

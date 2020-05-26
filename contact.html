@@ -11,78 +11,73 @@
   <body>
     <a href="#mainContent" class="skipLink">Skip to Content.</a>
     <header class="header headerContact">
+      <!-- hamburger menu inspired by leifriksheim from codePen https://codepen.io/leifriksheim/pen/QMmXjN -->
       <nav>
         <div class="logoDiv">
           <span class="logoWrapper">
             <a class="logo" href="./index.html">Mindn'Soul</a>
           </span>
         </div>
-         <!-- hamburger menu inspired by mutedblues from codePen https://codepen.io/mutedblues/pen/MmPNPG -->
-        <!-- <div class="hamburgerMenu">
+        <div class="hamburgerMenu">
           <input
             class="hamburgerCheckbox"
             type="checkbox"
             id="hamburgerButton"
           />
-          <label for="hamburgerButton" class="hamburgerButton"></label>
-          <ul class="hamburgerList">
-            <li><a class="bottomHover active" href="#">Home</a></li>
-            <li><a class="bottomHover" href="#">About</a></li>
-            <li><a class="bottomHover" href="./blog.html">Blog</a></li>
-            <li><a class="bottomHover" href="./contact.html">Contact</a></li>
-          </ul>
-        </div> -->
-        <div class="menu">
-            <ul class="menuList">
-              <li><a class="bottomHover " href="./index.html">Home</a></li>
+          <label for="hamburgerButton" class="hamburgerButton">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+          <div class="hamburgerList">
+            <ul class="hamburgerLinks">
+              <li><a class="bottomHover" href="./index.html">Home</a></li>
               <li><a class="bottomHover" href="#">About</a></li>
               <li><a class="bottomHover" href="./blog.html">Blog</a></li>
               <li><a class="bottomHover active" href="#">Contact</a></li>
             </ul>
           </div>
+        </div>
+        <div class="menu">
+          <ul class="menuList">
+            <li><a class="bottomHover" href="./index.html">Home</a></li>
+            <li><a class="bottomHover" href="#">About</a></li>
+            <li><a class="bottomHover" href="./blog.html">Blog</a></li>
+            <li><a class="bottomHover active" href="#">Contact</a></li>
+          </ul>
+        </div>
       </nav>
       <h2>Get in Touch</h2>
     </header>
     <main id="mainContent">
       <div class="contactSection wrapper">
         <form action="" class="contactForm">
-            <label class="sr-only" for="name">Name:</label>
-            <input type="text" name="Name" placeholder="Name" id="name" />
-            <label class="sr-only" for="email">Email:</label>
-            <input
-                type="email"
-                name="Email"
-                placeholder="Email address"
-                id="email"
-            />
-            <label class="sr-only" for="message">Message</label>
-            <textarea
-                name="message"
-                cols="30"
-                rows="7"
-                placeholder="Message"
-                id="message"
-            ></textarea>
+          <label class="sr-only" for="name">Name:</label>
+          <input type="text" name="Name" placeholder="Name" id="name" />
+          <label class="sr-only" for="email">Email:</label>
+          <input
+            type="email"
+            name="Email"
+            placeholder="Email address"
+            id="email"
+          />
+          <label class="sr-only" for="message">Message</label>
+          <textarea
+            name="message"
+            cols="30"
+            rows="7"
+            placeholder="Message"
+            id="message"
+          ></textarea>
           <button class="formButton" type="submit">Submit</button>
         </form>
         <section>
-          <ul class=>
-            <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </li>
-            <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </li>
-            <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </li>
-          </ul>
           <div class="contactInfo">
             <div>
               <ul class="socialMediaIcons">
-                  <li>
-                    <a href="#" ><i class="fab fa-facebook-f"></i></a>
-                  </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
                 <li>
                   <a href="#"><i class="fab fa-instagram"></i></a>
                 </li>

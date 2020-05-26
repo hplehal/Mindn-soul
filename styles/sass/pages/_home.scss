@@ -32,14 +32,14 @@
     h1 {
       @include fontMixin($dokdo, 115px, $marigold);
       @include responsiveMedia(smallTablet) {
-        font-size: 61px;
+        font-size: 60px;
       }
     }
     h3 {
       @include fontMixin($lato, 45px, $iceBlue);
       font-weight: 300;
       @include responsiveMedia(smallTablet) {
-        font-size: 30px;
+        font-size: 25px;
       }
     }
   }

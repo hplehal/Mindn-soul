@@ -1,64 +1,74 @@
-// .hamburgerMenu {
-//   display: none;
-// }
+.hamburgerMenu {
+  display: none;
+  @include responsiveMedia(smallTablet) {
+    display: flex;
+  }
+}
 
 .hamburgerCheckbox {
-  visibility: hidden;
-}
-
-label,
-label::before,
-label::after {
-  position: fixed;
-  width: 80px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: $iceBlue;
-  transition: 0.6s;
-  z-index: 100;
-}
-
-label {
-  cursor: pointer;
-  top: 80px;
-  right: 80px;
-  margin-left: -50px;
-  margin-top: -7.5px;
-  &::before {
-    content: "";
-    transform: translateY(-20px);
+  display: none;
+  &:checked ~ .hamburgerList {
+    transform: translateX(0rem);
   }
-  &::after {
-    content: "";
-    transform: translateY(20px);
-  }
-}
-
-.hamburgerCheckbox:checked + label {
-  width: 0px;
-}
-
-.hamburgerCheckbox:checked + label::before {
-  transform: rotate(45deg) translate(0px);
-}
-.hamburgerCheckbox:checked + label::after {
-  transform: rotate(-45deg) translate(0px);
 }
 
 .hamburgerList {
-  position: absolute;
-  width: 300px;
-  margin: 100px 300px;
-  padding: 50px;
-  padding-top: 125px;
+  background: $mudGreen;
+  width: 60%;
+  height: 100vh;
+  position: fixed;
+  transform: translateX(60rem);
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: linear 0.5s;
+  opacity: 0.8;
+}
 
-  background-color: $marigold;
-  list-style-type: none;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s linear;
-  //   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  a {
-    text-decoration: none;
+.hamburgerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40vh;
+  li {
+    margin-bottom: 50px;
+    a {
+      @include fontMixin($dokdo, 40px, $iceBlue);
+    }
+  }
+}
+
+.hamburgerButton {
+  position: fixed;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  right: 70px;
+  top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 100;
+  & > div {
+    height: 4px;
+    background-color: $marigold;
+    transition: 0.5s;
+    z-index: 100;
+  }
+}
+
+.hamburgerCheckbox:checked ~ .hamburgerButton > div {
+  background-color: $iceBlue;
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+  }
+  &:nth-child(3) {
+    transform: translateY(-14px) rotate(-45deg);
   }
 }
