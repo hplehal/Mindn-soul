@@ -5,17 +5,13 @@
 // $camoGreen: #1E140E;
 
 .headerBlog {
+  height: 60vh;
   @include headerBackground(
     url(../assets/images/blog-image-1.jpg),
     no-repeat,
     cover,
     80%
   );
-
-  height: 60vh;
-  h2 {
-    padding: 150px;
-  }
 }
 .blogWrapper {
   background-color: $camoGreen;

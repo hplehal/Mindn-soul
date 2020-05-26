@@ -7,6 +7,14 @@ h2 {
   @include fontMixin($dokdo, 105px, $marigold);
   line-height: 69.6px;
   letter-spacing: 10.9px;
+  padding: 150px;
+  @include responsiveMedia(smallTablet) {
+    font-size: 90px;
+  }
+  @include responsiveMedia(phone) {
+    padding: 50px;
+    text-align: left;
+  }
 }
 
 h3 {
@@ -57,8 +65,4 @@ i {
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
-}
-
-.hamburger {
-  display: none;
 }

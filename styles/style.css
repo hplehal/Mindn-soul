@@ -383,6 +383,20 @@ h2 {
   color: #ffc600;
   line-height: 69.6px;
   letter-spacing: 10.9px;
+  padding: 150px;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    padding: 50px;
+    text-align: left;
+  }
 }
 
 h3 {
@@ -454,10 +468,6 @@ i {
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
-}
-
-.hamburger {
-  display: none;
 }
 
 nav {
@@ -719,8 +729,8 @@ nav {
   cursor: pointer;
   width: 32px;
   height: 32px;
-  right: 70px;
-  top: 70px;
+  right: 30px;
+  top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,6 +750,13 @@ nav {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 100;
+}
+
+@media (max-width: 600px) {
+  .hamburgerButton {
+    top: 80;
+    right: 80;
+  }
 }
 
 .hamburgerCheckbox:checked ~ .hamburgerButton > div {
@@ -778,6 +795,7 @@ nav {
 
 @media (max-width: 900px) {
   .contactForm {
+    padding: 35px;
     bottom: 0;
     margin-top: 50px;
   }
@@ -802,6 +820,15 @@ textarea {
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    margin: 5px;
+    font-size: 16px;
+  }
 }
 
 input[type="text"],
@@ -1276,15 +1303,11 @@ footer {
 }
 
 .headerBlog {
+  height: 60vh;
   background-image: url(../assets/images/blog-image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 80%;
-  height: 60vh;
-}
-
-.headerBlog h2 {
-  padding: 150px;
 }
 
 .blogWrapper {
@@ -1475,10 +1498,6 @@ aside .asideContent {
   background-size: cover;
   background-position-x: 80%;
   height: 60vh;
-}
-
-.headerContact h2 {
-  padding: 150px;
 }
 
 .contactSection {
